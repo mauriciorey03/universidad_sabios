@@ -1,0 +1,24 @@
+package com.proyecto_universidad_java.repository.models;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+public class p_Ciudad {
+    private int id;
+    private String nombre;
+
+    public p_Ciudad(String nombre){
+        this.nombre = nombre;
+    }
+}
+
+// CREATE TABLE ciudad (
+//   id INT NOT NULL AUTO_INCREMENT,
+//   nombre VARCHAR(255) NOT NULL,
+//   PRIMARY KEY (id)
+// );
