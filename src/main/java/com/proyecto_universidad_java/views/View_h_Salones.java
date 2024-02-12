@@ -55,7 +55,7 @@ public class View_h_Salones extends View_a_MainUniversidad {
         String nombre = leer.nextLine();
         System.out.print("Capacidad del salón:");
         int capacidad_salon = leer.nextInt();
-        System.out.print("Precio compra: ");
+        System.out.print("Piso: ");
         int piso = leer.nextInt();
         serviceSalones.crear(new h_Salones(nombre, capacidad_salon, piso));
 

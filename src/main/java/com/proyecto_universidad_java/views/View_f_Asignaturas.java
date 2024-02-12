@@ -133,7 +133,7 @@ public class View_f_Asignaturas extends View_a_MainUniversidad {
             opcion = leer.nextLine();
 
             if (opcion.equalsIgnoreCase("si")) {
-                System.out.println("Precio compra: ");
+                System.out.println("cantidad estudiantes: ");
                 int cantidad_estudiantes = leer.nextInt();
                 AsignaturaActual.setCantidad_estudiantes(cantidad_estudiantes);
 

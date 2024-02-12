@@ -82,7 +82,7 @@ public class Repository_j_MatriculasMysqlImpl implements Repository_j_Matriculas
 
     public void eliminar(int codigo){
         try (Connection conn = getConnection();
-                PreparedStatement stmt = conn.prepareStatement("DELETE FROM registro WHERE id=?")) {
+                PreparedStatement stmt = conn.prepareStatement("DELETE FROM registro WHERE id_registro=?")) {
             stmt.setInt(1, codigo);
             stmt.executeUpdate();
         } catch (SQLException throwables) {
