@@ -20,6 +20,9 @@ public class f_Asignaturas {
         this.creditos = creditos;
         this.cantidad_estudiantes = cantidad_estudiantes;
     }
+    public void print() {
+        System.out.println("ID Materia: " + getId_materia()+ ", Nombre materia: " + getNombre_materia()+ ", Creditos: " + getCreditos()+", Cantidad estudiantes: "+getCantidad_estudiantes());
+    }
 }
 
 // CREATE TABLE materias (

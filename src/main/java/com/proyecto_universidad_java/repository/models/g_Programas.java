@@ -18,6 +18,9 @@ public class g_Programas {
         this.nombre_programa = nombre_programa;
         this.categoria = categoria;
     }
+    public void print() {
+        System.out.println("ID Programa: " + getId_programa()+ ", Nombre programa: " + getNombre_programa()+ ", Categoria: " + getCategoria());
+    }
 }
 
 // CREATE TABLE carreras (

@@ -21,6 +21,10 @@ public class j_Matriculas {
         this.id_materia = id_materia;
 
     }
+    public void print() {
+        System.out.println("ID Matricula: " + getId_registro()+ ", ID Estudiante: " + getId_estudiante()+ ", ID Periodo: " + 
+        getId_periodo()+", ID Materia: "+getId_materia());
+    }
 }
 
 // CREATE TABLE registro (

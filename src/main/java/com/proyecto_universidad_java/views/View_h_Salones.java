@@ -39,7 +39,7 @@ public class View_h_Salones extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Salones----");
+        System.out.println("\n----Menu--Salones----");
         System.out.println("1. Crear Salones.");
         System.out.println("2. Listar Salones.");
         System.out.println("3. Buscar Salones.");
@@ -62,10 +62,11 @@ public class View_h_Salones extends View_a_MainUniversidad {
     }
 
     public static void listarSalones() {
-        System.out.println("Lista de Salones");
+        System.out.println("\nLista de Salones");
         for (h_Salones Salone : serviceSalones.listar()) {
-            System.out.println(Salone.toString());
-            System.out.println();
+            // System.out.println(Salone.toString());
+            // System.out.println();
+            Salone.print();
         }
     }
 

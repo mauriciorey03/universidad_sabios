@@ -10,12 +10,17 @@ import java.util.List;
 
 import com.proyecto_universidad_java.repository.Repository_d_Alumnos;
 import com.proyecto_universidad_java.repository.models.d_Alumnos;
+import com.proyecto_universidad_java.repository.models.m_Personas;
 import com.universidad.utils.conexionpersistencia.conexionbdmysql.ConexionBDMysql;
 
 public class Repository_d_AlumnosMysqlImpl implements Repository_d_Alumnos {
 
     private Connection getConnection() throws SQLException {
         return ConexionBDMysql.getInstance();
+    }
+    public List<m_Personas> toList() {
+        Repository_m_PersonasMysqlImpl repositoryPersonMysqlImpl = new Repository_m_PersonasMysqlImpl();
+        return repositoryPersonMysqlImpl.toListStudents();
     }
 
     public List<d_Alumnos> listar() {

@@ -42,7 +42,7 @@ public class View_b_Departamentos extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Departamentos----");
+        System.out.println("\n----Menu--Departamentos----");
         System.out.println("1. Crear Departamentos.");
         System.out.println("2. Listar Departamentos.");
         System.out.println("3. Buscar Departamentos.");
@@ -61,10 +61,10 @@ public class View_b_Departamentos extends View_a_MainUniversidad {
     }
 
     public static void listarDepartamentos() {
-        System.out.println("Lista de Departamentos");
+        System.out.println("\nLista de Departamentos");
         for (b_Departamentos departamento : serviceDepartamento.listar()) {
-            System.out.println(departamento.toString());
-            System.out.println();
+            // System.out.println(departamento.toString());
+            departamento.print();
         }
     }
 

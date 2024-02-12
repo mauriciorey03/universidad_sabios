@@ -39,7 +39,7 @@ public class View_e_Cursos extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Cursos----");
+        System.out.println("\n----Menu--Cursos----");
         System.out.println("1. Crear Cursos.");
         System.out.println("2. Listar Cursos.");
         System.out.println("3. Buscar Cursos.");
@@ -60,10 +60,11 @@ public class View_e_Cursos extends View_a_MainUniversidad {
     }
 
     public static void listarCursos() {
-        System.out.println("Lista de Cursos");
+        System.out.println("\nLista de Cursos");
         for (e_Cursos Curso : serviceCursos.listar()) {
-            System.out.println(Curso.toString());
-            System.out.println();
+            // System.out.println(Curso.toString());
+            // System.out.println();
+            Curso.print();
         }
     }
 

@@ -39,7 +39,7 @@ public class View_f_Asignaturas extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Asignaturas----");
+        System.out.println("\n----Menu--Asignaturas----");
         System.out.println("1. Crear Asignaturas.");
         System.out.println("2. Listar Asignaturas.");
         System.out.println("3. Buscar Asignaturas.");
@@ -62,10 +62,11 @@ public class View_f_Asignaturas extends View_a_MainUniversidad {
     }
 
     public static void listarAsignaturas() {
-        System.out.println("Lista de Asignaturas");
+        System.out.println("\nLista de Asignaturas");
         for (f_Asignaturas Asignatura : serviceAsignaturas.listar()) {
-            System.out.println(Asignatura.toString());
-            System.out.println();
+            // System.out.println(Asignatura.toString());
+            // System.out.println();
+            Asignatura.print();
         }
     }
 

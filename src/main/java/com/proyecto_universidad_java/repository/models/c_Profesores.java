@@ -18,6 +18,9 @@ public class c_Profesores {
         this.id_persona = id_persona;
         this.id_facultad = id_facultad;
     }
+    public void print() {
+        System.out.println("ID: " + getId_profesor()+ ", ID Persona: " + getId_persona()+ ", ID Facultad: " + getId_facultad());
+    }
 }
 
 // CREATE TABLE profesores (

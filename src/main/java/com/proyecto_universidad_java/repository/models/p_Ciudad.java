@@ -15,6 +15,9 @@ public class p_Ciudad {
     public p_Ciudad(String nombre){
         this.nombre = nombre;
     }
+    public void print() {
+        System.out.println("ID Ciudad: " + getId()+ ", Nombre ciudad: " + getNombre());
+    }
 }
 
 // CREATE TABLE ciudad (

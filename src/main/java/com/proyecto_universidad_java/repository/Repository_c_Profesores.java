@@ -3,10 +3,13 @@ package com.proyecto_universidad_java.repository;
 import java.util.List;
 
 import com.proyecto_universidad_java.repository.models.c_Profesores;
+import com.proyecto_universidad_java.repository.models.m_Personas;
 
 public interface Repository_c_Profesores {
 
     List<c_Profesores> listar();
+
+    List<m_Personas> toList();
 
     c_Profesores porCodigo(int codigo);
 

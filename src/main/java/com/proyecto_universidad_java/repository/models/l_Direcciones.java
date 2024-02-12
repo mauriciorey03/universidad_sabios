@@ -16,6 +16,9 @@ public class l_Direcciones {
     public l_Direcciones(String direccion_valor){
         this.direccion_valor = direccion_valor;
     }
+    public void print() {
+        System.out.println("ID Dirección: " + getId()+ ", Dirección de valor: " + getDireccion_valor());
+    }
 }
 
 // CREATE TABLE direcciones (

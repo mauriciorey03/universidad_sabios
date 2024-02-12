@@ -20,6 +20,9 @@ public class h_Salones {
         this.capacidad_salon = capacidad_salon;
         this.piso_edificio = piso_edificio;
     }
+    public void print() {
+        System.out.println("ID Salón: " + getId_salon()+ ", Salón: " + getValor_salon()+ ", Capacidad del salón: " + getCapacidad_salon()+", Piso: "+getPiso_edificio());
+    }
 }
 
 // CREATE TABLE salon (

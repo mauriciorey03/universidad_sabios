@@ -39,7 +39,7 @@ public class View_i_Tarifas extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Tarifas----");
+        System.out.println("\n----Menu--Tarifas----");
         System.out.println("1. Crear Tarifas.");
         System.out.println("2. Listar Tarifas.");
         System.out.println("3. Buscar Tarifas.");
@@ -62,10 +62,11 @@ public class View_i_Tarifas extends View_a_MainUniversidad {
     }
 
     public static void listarTarifas() {
-        System.out.println("Lista de Tarifas");
+        System.out.println("\nLista de Tarifas");
         for (i_Tarifas Tarifa : serviceTarifas.listar()) {
-            System.out.println(Tarifa.toString());
-            System.out.println();
+            // System.out.println(Tarifa.toString());
+            // System.out.println();
+            Tarifa.print();
         }
     }
 

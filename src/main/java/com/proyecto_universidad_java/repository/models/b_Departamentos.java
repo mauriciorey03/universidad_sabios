@@ -16,6 +16,9 @@ public class b_Departamentos {
     public b_Departamentos(String nombre_facultad){
         this.nombre_facultad = nombre_facultad;
     }
+    public void print() {
+        System.out.println("ID: " + getId_facultad()+ ", Departamento: " + getNombre_facultad());
+    }
 }
 
 // CREATE TABLE facultades (

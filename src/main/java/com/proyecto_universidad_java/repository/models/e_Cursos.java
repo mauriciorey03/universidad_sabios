@@ -18,6 +18,9 @@ public class e_Cursos {
         this.nombre_curso = nombre_curso;
         this.guia_curso = guia_curso;
     }
+    public void print() {
+        System.out.println("ID Curso: " + getId_curso()+ ", Nombre curso: " + getNombre_curso()+ ", Guía curso: " + getGuia_curso());
+    }
 }
 
 // CREATE TABLE curso_materia (

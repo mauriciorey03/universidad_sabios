@@ -1,6 +1,7 @@
 package com.proyecto_universidad_java.views;
 
 import com.proyecto_universidad_java.repository.models.d_Alumnos;
+import com.proyecto_universidad_java.repository.models.m_Personas;
 
 public class View_d_Alumnos extends View_a_MainUniversidad {
 
@@ -39,7 +40,7 @@ public class View_d_Alumnos extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Alumnos----");
+        System.out.println("\n----Menu--Alumnos----");
         System.out.println("1. Crear Alumnos.");
         System.out.println("2. Listar Alumnos.");
         System.out.println("3. Buscar Alumnos.");
@@ -51,19 +52,20 @@ public class View_d_Alumnos extends View_a_MainUniversidad {
 
     public static void crearAlumnos() {
         leer.nextLine();
-        System.out.print("Nombre: ");
+        System.out.print("ID Persona: ");
         int id_persona = leer.nextInt();
-        System.out.print("Precio venta:");
+        System.out.print("ID Programa:");
         int id_programa = leer.nextInt();
         serviceAlumnos.crear(new d_Alumnos(id_persona,id_programa));
 
     }
 
     public static void listarAlumnos() {
-        System.out.println("Lista de Alumnos");
-        for (d_Alumnos Alumno : serviceAlumnos.listar()) {
-            System.out.println(Alumno.toString());
-            System.out.println();
+        System.out.println("\nLista de Alumnos");
+        for (m_Personas Alumno : serviceAlumnos.toList()) {
+            // System.out.println(Alumno.toString());
+            // System.out.println();
+            Alumno.print();
         }
     }
 

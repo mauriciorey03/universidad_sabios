@@ -17,6 +17,9 @@ public class o_Periodo {
         this.anio = anio;
         this.semestre = semestre;
     }
+    public void print() {
+        System.out.println("ID Periodo: " + getId_periodo()+ ", Año: " + getAnio()+ ", Semestre: " + getSemestre());
+    }
 }
 
 // CREATE TABLE periodo (

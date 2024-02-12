@@ -18,6 +18,9 @@ public class n_Edificios {
         this.nombre_edificio = nombre_edificio;
         this.pisos_edificios = pisos_edificios;
     }
+    public void print() {
+        System.out.println("ID Edificio: " + getId_edificio()+ ", Nombre edificio: " + getNombre_edificio()+ ", Pisos: " + getPisos_edificios());
+    }
 }
 
 // CREATE TABLE edificios (

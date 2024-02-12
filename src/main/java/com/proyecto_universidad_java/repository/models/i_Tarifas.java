@@ -24,6 +24,9 @@ public class i_Tarifas {
         this.id_periodo = id_periodo;
 
     }
+    public void print() {
+        System.out.println("ID Tarifa: " + getId_valor_matricula()+ ", Valor créditos: " + getValor_credito()+ ", ID Programa: " + getId_programa()+", ID Periodo: "+getId_periodo());
+    }
 }
 
 // CREATE TABLE valor_matricula (

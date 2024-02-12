@@ -39,7 +39,7 @@ public class View_g_Programas extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Programas----");
+        System.out.println("\n----Menu--Programas----");
         System.out.println("1. Crear Programas.");
         System.out.println("2. Listar Programas.");
         System.out.println("3. Buscar Programas.");
@@ -60,10 +60,11 @@ public class View_g_Programas extends View_a_MainUniversidad {
     }
 
     public static void listarProgramas() {
-        System.out.println("Lista de Programas");
+        System.out.println("\nLista de Programas");
         for (g_Programas Programa : serviceProgramas.listar()) {
-            System.out.println(Programa.toString());
-            System.out.println();
+            // System.out.println(Programa.toString());
+            // System.out.println();
+            Programa.print();
         }
     }
 

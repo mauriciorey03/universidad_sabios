@@ -4,6 +4,7 @@ package com.proyecto_universidad_java.views;
 // import com.campusland.respository.models.Profesores;
 
 import com.proyecto_universidad_java.repository.models.c_Profesores;
+import com.proyecto_universidad_java.repository.models.m_Personas;
 
 public class View_c_Profesores extends View_a_MainUniversidad {
 
@@ -42,7 +43,7 @@ public class View_c_Profesores extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Profesores----");
+        System.out.println("\n----Menu--Profesores----");
         System.out.println("1. Crear Profesores.");
         System.out.println("2. Listar Profesores.");
         System.out.println("3. Buscar Profesores.");
@@ -63,10 +64,10 @@ public class View_c_Profesores extends View_a_MainUniversidad {
     }
 
     public static void listarProfesores() {
-        System.out.println("Lista de Profesores");
-        for (c_Profesores profesores : serviceProfesores.listar()) {
-            System.out.println(profesores.toString());
-            System.out.println();
+        System.out.println("\nLista de Profesores");
+        for (m_Personas profesores : serviceProfesores.toList()) {
+            // System.out.println(profesores.toString());
+            profesores.print();
         }
     }
 

@@ -32,6 +32,32 @@ public class Repository_m_PersonasMysqlImpl implements Repository_m_Personas {
         return personas;
     }
 
+    public List<m_Personas> toListStudents() {
+        List<m_Personas> listPersons = new ArrayList<>();
+        try (Statement stmt = getConnection().createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM personas p INNER JOIN estudiante_carrera s ON p.id_persona = s.id_estudiante");) {
+            while (rs.next()) {
+                listPersons.add(crearPersona(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listPersons;
+    }
+
+    public List<m_Personas> toListTeachers() {
+        List<m_Personas> listPersons = new ArrayList<>();
+        try (Statement stmt = getConnection().createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM personas p INNER JOIN profesores t ON p.id_persona = t.id_profesor");) {
+            while (rs.next()) {
+                listPersons.add(crearPersona(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return listPersons;
+    }
+
     public m_Personas porCodigo(int codigo) {
         m_Personas Personas = null;
 
@@ -103,6 +129,7 @@ public class Repository_m_PersonasMysqlImpl implements Repository_m_Personas {
 
     private m_Personas crearPersona(ResultSet rs) throws SQLException {
         return new m_Personas(
+                rs.getInt("id_persona"),
                 rs.getString("nombre_persona"),
                 rs.getString("apellido_persona"),
                 rs.getInt("telefono"),

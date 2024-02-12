@@ -18,6 +18,9 @@ public class d_Alumnos {
         this.id_persona = id_persona;
         this.id_programa = id_programa;
     }
+    public void print() {
+        System.out.println("ID Estudiante: " + getId_estudiante()+ ", ID Persona: " + getId_persona()+ ", ID Programa: " + getId_programa());
+    }
 }
 
 // CREATE TABLE estudiante_carrera (

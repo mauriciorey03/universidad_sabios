@@ -2,12 +2,15 @@ package com.proyecto_universidad_java.repository.models;
 
 
 import java.sql.Date;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 
 import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 
 public class m_Personas {
@@ -33,6 +36,10 @@ public class m_Personas {
         this.numero_documento=numero_documento;
         this.id_ciudad=id_ciudad;
         this.id_direccion=id_direccion;
+    }
+    public void print() {
+        System.out.println("ID-" + getId_persona()+ ", Nombre: " + getNombre_persona()+ " " + getApellido_persona()+", \nFecha nacimiento: "+getFecha_nacimiento()+", Género: "+getGenero()+", \nDocumento: "+getClase_documento()+" - No."+getNumero_documento()/*+", \nID Ciudad: "+getId_ciudad()+", ID Dirección: "+getId_direccion()*/);
+        System.out.println();
     }
 }
 

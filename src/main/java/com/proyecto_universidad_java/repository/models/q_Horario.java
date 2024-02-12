@@ -23,6 +23,9 @@ public class q_Horario {
         this.hora_final = hora_final;
 
     }
+    public void print() {
+        System.out.println("ID Horario: " + getId_horario()+ ", Día clase: " + getDia_clase()+ ", Hora Inicio: " + getHora_inicio()+", Hora final: "+getHora_final());
+    }
 }
 
 // CREATE TABLE horario (

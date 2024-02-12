@@ -39,7 +39,7 @@ public class View_j_Matriculas extends View_a_MainUniversidad {
     }
 
     public static int mostrarMenu() {
-        System.out.println("----Menu--Matriculas----");
+        System.out.println("\n----Menu--Matriculas----");
         System.out.println("1. Crear Matriculas.");
         System.out.println("2. Listar Matriculas.");
         System.out.println("3. Buscar Matriculas.");
@@ -62,10 +62,11 @@ public class View_j_Matriculas extends View_a_MainUniversidad {
     }
 
     public static void listarMatriculas() {
-        System.out.println("Lista de Matricula");
+        System.out.println("\nLista de Matricula");
         for (j_Matriculas Matricula : serviceMatriculas.listar()) {
-            System.out.println(Matricula.toString());
-            System.out.println();
+            // System.out.println(Matricula.toString());
+            // System.out.println();
+            Matricula.print();
         }
     }
 
