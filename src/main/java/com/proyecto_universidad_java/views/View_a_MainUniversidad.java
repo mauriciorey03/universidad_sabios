@@ -109,7 +109,7 @@ public class View_a_MainUniversidad {
                     View_f_Asignaturas.startMenu();
                     break;
                 case 6:
-                    System.out.println("Opción 6 -- Departamentos\n");
+                    System.out.println("Opción 6 -- Programas\n");
                     View_g_Programas.startMenu();
                     break;
                 case 7:
@@ -121,7 +121,7 @@ public class View_a_MainUniversidad {
                     View_i_Tarifas.startMenu();
                     break;
                 case 9:
-                    System.out.println("Opción 9 -- Departamentos\n");
+                    System.out.println("Opción 9 -- Matriculas\n");
                     View_j_Matriculas.startMenu();
                     break;
                 default:
