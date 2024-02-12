@@ -24,7 +24,7 @@ public class View_d_Alumnos extends View_a_MainUniversidad {
                     buscarAlumnos();
                     break;
                 case 4:
-                    //modificarAlumnos();
+                    modificarAlumnos();
                     break;
                 case 5:
                     eliminarAlumnos();
@@ -101,58 +101,44 @@ public class View_d_Alumnos extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarAlumnos() {
-    //     d_Alumnos AlumnosActual = buscarGetAlumnos();
-    //     leer.nextLine();
-    //     if (AlumnosActual != null) {
-    //         System.out.println();
-    //         AlumnosActual.toString();
+    public static void modificarAlumnos() {
+        d_Alumnos AlumnosActual = buscarGetAlumnos();
+        leer.nextLine();
+        if (AlumnosActual != null) {
+            System.out.println();
+            AlumnosActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar id persona: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             AlumnosActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id persona: ");
+                int id_persona = leer.nextInt();
+                AlumnosActual.setId_persona(id_persona);
+                leer.nextLine();
+            }
+            System.out.println("Modificar id_programa: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             AlumnosActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_programa: ");
+                int id_programa = leer.nextInt();
+                AlumnosActual.setId_programa(id_programa);
+                leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             AlumnosActual.setPrecioCompra(precioCompra);
-    //         }
+            }
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
-
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             AlumnosActual.setDescripcion(descripcion);
-    //         }
-
-    //         serviceAlumnos.editar(AlumnosActual);
-    //     }
-    // }
+            serviceAlumnos.editar(AlumnosActual);
+        }
+    }
 
     public static void eliminarAlumnos() {       
         d_Alumnos Alumnos = buscarGetAlumnos();
         if (Alumnos != null) {
             serviceAlumnos.eliminar(Alumnos.getId_estudiante());
-            System.out.println("El Alumnos se elmino correctamente ");
+            System.out.println("El Alumno se elimino correctamente ");
         } else {
-            System.out.println("Se presento un proplema y no se puedo eliminar el Alumnos ");
+            System.out.println("Se presento un problema y no se puedo eliminar el Alumno ");
         }
 
     }

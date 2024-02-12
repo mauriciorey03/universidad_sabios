@@ -24,7 +24,7 @@ public class View_h_Salones extends View_a_MainUniversidad {
                     buscarSalones();
                     break;
                 case 4:
-                    //modificarSalones();
+                    modificarSalones();
                     break;
                 case 5:
                     eliminarSalones();
@@ -103,50 +103,44 @@ public class View_h_Salones extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarSalones() {
-    //     Salones SaloneActual = buscarGetSalones();
-    //     leer.nextLine();
-    //     if (SaloneActual != null) {
-    //         System.out.println();
-    //         SaloneActual.toString();
+    public static void modificarSalones() {
+        h_Salones SaloneActual = buscarGetSalones();
+        leer.nextLine();
+        if (SaloneActual != null) {
+            System.out.println();
+            SaloneActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar nombre del salón: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             SaloneActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Nombre del salón: ");
+                String nuevoNombre = leer.nextLine();
+                SaloneActual.setValor_salon(nuevoNombre);
+                leer.nextLine();
+            }
+            System.out.println("Modificar capacidad del salón: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             SaloneActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("capacidad del salón: ");
+                int capacidad = leer.nextInt();
+                SaloneActual.setCapacidad_salon(capacidad);
+                leer.nextLine();
+            }
+            System.out.println("Modificar piso edificio: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             SaloneActual.setPrecioCompra(precioCompra);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("piso edificio: ");
+                int piso_edificio = leer.nextInt();
+                SaloneActual.setPiso_edificio(piso_edificio);
+            }
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             SaloneActual.setDescripcion(descripcion);
-    //         }
-
-    //         serviceSalones.editar(SaloneActual);
-    //     }
-    // }
+            serviceSalones.editar(SaloneActual);
+        }
+    }
 
     public static void eliminarSalones() {       
         h_Salones Salone = buscarGetSalones();

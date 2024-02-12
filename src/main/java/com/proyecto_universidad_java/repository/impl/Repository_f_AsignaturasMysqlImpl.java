@@ -71,6 +71,8 @@ public class Repository_f_AsignaturasMysqlImpl implements Repository_f_Asignatur
             stmt.setString(1, asignaturas.getNombre_materia());
             stmt.setInt(2, asignaturas.getCreditos());
             stmt.setInt(3, asignaturas.getCantidad_estudiantes());
+            stmt.setInt(4, asignaturas.getId_materia());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

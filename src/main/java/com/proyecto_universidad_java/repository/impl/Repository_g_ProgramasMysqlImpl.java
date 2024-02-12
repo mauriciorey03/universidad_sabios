@@ -49,26 +49,28 @@ public class Repository_g_ProgramasMysqlImpl implements Repository_g_Programas {
             return programas;
         }    
 
-    public void crear(g_Programas alumnos){
+    public void crear(g_Programas programa){
 
         String sql = "INSERT INTO carreras(nombre_programa, categoria) VALUES(?,?)";
 
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, alumnos.getNombre_programa());
-            stmt.setString(2, alumnos.getCategoria());
+            stmt.setString(1, programa.getNombre_programa());
+            stmt.setString(2, programa.getCategoria());
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
 
-    public void editar(g_Programas alumnos){
+    public void editar(g_Programas programa){
         String sql = "UPDATE carreras SET nombre_programa=?, categoria=? WHERE id_programa=?";
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, alumnos.getNombre_programa());
-            stmt.setString(2, alumnos.getCategoria());
+            stmt.setString(1, programa.getNombre_programa());
+            stmt.setString(2, programa.getCategoria());
+            stmt.setInt(3, programa.getId_programa());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

@@ -69,6 +69,8 @@ public class Repository_e_CursosMysqlImpl implements Repository_e_Cursos {
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, cursos.getNombre_curso());
             stmt.setString(2, cursos.getGuia_curso());
+            stmt.setInt(3, cursos.getId_curso());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

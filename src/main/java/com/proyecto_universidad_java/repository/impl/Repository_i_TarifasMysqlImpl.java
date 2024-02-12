@@ -71,6 +71,8 @@ public class Repository_i_TarifasMysqlImpl implements Repository_i_Tarifas {
             stmt.setDouble(1, Tarifa.getValor_credito());
             stmt.setInt(2, Tarifa.getId_programa());
             stmt.setInt(3, Tarifa.getId_periodo());
+            stmt.setInt(4, Tarifa.getId_valor_matricula());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

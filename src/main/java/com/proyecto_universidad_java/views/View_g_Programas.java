@@ -24,7 +24,7 @@ public class View_g_Programas extends View_a_MainUniversidad {
                     buscarProgramas();
                     break;
                 case 4:
-                    //modificarProgramas();
+                    modificarProgramas();
                     break;
                 case 5:
                     eliminarProgramas();
@@ -101,58 +101,43 @@ public class View_g_Programas extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarProgramas() {
-    //     Programas ProgramaActual = buscarGetProgramas();
-    //     leer.nextLine();
-    //     if (ProgramaActual != null) {
-    //         System.out.println();
-    //         ProgramaActual.toString();
+    public static void modificarProgramas() {
+        g_Programas ProgramaActual = buscarGetProgramas();
+        leer.nextLine();
+        if (ProgramaActual != null) {
+            System.out.println();
+            ProgramaActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar nombre programa: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             ProgramaActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Nombre programa: ");
+                String nuevoNombre = leer.nextLine();
+                ProgramaActual.setNombre_programa(nuevoNombre);
+                leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             ProgramaActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            }
+            System.out.println("Modificar Categoria: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             ProgramaActual.setPrecioCompra(precioCompra);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Categoria: ");
+                String categoria = leer.nextLine();
+                ProgramaActual.setCategoria(categoria);
+            }
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
-
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             ProgramaActual.setDescripcion(descripcion);
-    //         }
-
-    //         serviceProgramas.editar(ProgramaActual);
-    //     }
-    // }
+            serviceProgramas.editar(ProgramaActual);
+        }
+    }
 
     public static void eliminarProgramas() {       
         g_Programas Programa = buscarGetProgramas();
         if (Programa != null) {
             serviceProgramas.eliminar(Programa.getId_programa());
-            System.out.println("El Programas se elmino correctamente ");
+            System.out.println("El Programas se elimino correctamente ");
         } else {
-            System.out.println("Se presento un proplema y no se puedo eliminar el Programas ");
+            System.out.println("Se presento un problema y no se puedo eliminar el Programas ");
         }
 
     }

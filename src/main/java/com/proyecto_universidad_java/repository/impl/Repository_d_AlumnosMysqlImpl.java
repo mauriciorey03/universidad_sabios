@@ -69,6 +69,8 @@ public class Repository_d_AlumnosMysqlImpl implements Repository_d_Alumnos {
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, alumnos.getId_persona());
             stmt.setInt(2, alumnos.getId_programa());
+            stmt.setInt(3, alumnos.getId_estudiante());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

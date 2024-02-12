@@ -118,6 +118,7 @@ public class View_c_Profesores extends View_a_MainUniversidad {
                 System.out.println("id_persona: ");
                 int id_persona = leer.nextInt();
                 profesoresActual.setId_persona(id_persona);
+                leer.nextLine();
             }
             System.out.println("Modificar id_facultad: si o no? ");
             opcion = leer.nextLine();
@@ -138,13 +139,10 @@ public class View_c_Profesores extends View_a_MainUniversidad {
             serviceProfesores.eliminar(profesores.getId_profesor());
             System.out.println("El Profesor se elimino correctamente ");
         } else {
-            System.out.println("Se presento un proplema y no se puedo eliminar el Profesores ");
+            System.out.println("Se presento un problema y no se puedo eliminar el Profesores ");
         }
 
     }
-
-
-
 
 
 }

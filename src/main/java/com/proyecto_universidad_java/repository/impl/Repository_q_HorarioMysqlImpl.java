@@ -71,6 +71,8 @@ public class Repository_q_HorarioMysqlImpl implements Repository_q_Horario {
             stmt.setString(1, horario.getDia_clase());
             stmt.setTime(2, horario.getHora_inicio());
             stmt.setTime(3, horario.getHora_final());
+            stmt.setInt(4, horario.getId_horario());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

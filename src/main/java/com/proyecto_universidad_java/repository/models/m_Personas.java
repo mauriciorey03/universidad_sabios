@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class m_Personas {
-    private int id_registro;
+    private int id_persona;
     private String nombre_persona;
     private String apellido_persona;
     private int telefono;
@@ -22,9 +22,8 @@ public class m_Personas {
     private int id_ciudad;
     private int id_direccion;
 
-    public m_Personas(int id_registro, String nombre_persona, String apellido_persona, int telefono, Date fecha_nacimiento, String genero, String clase_documento, int numero_documento, int id_ciudad, int id_direccion){
+    public m_Personas(String nombre_persona, String apellido_persona, int telefono, Date fecha_nacimiento, String genero, String clase_documento, int numero_documento, int id_ciudad, int id_direccion){
         
-        this.id_registro=id_registro;
         this.nombre_persona=nombre_persona;
         this.apellido_persona=apellido_persona;
         this.telefono=telefono;

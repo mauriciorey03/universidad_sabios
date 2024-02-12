@@ -24,7 +24,7 @@ public class View_j_Matriculas extends View_a_MainUniversidad {
                     buscarMatriculas();
                     break;
                 case 4:
-                    //modificarMatriculas();
+                    modificarMatricula();
                     break;
                 case 5:
                     eliminarMatricula();
@@ -103,50 +103,43 @@ public class View_j_Matriculas extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarMatricula() {
-    //     Matricula MatriculaActual = buscarGetMatricula();
-    //     leer.nextLine();
-    //     if (MatriculaActual != null) {
-    //         System.out.println();
-    //         MatriculaActual.toString();
+    public static void modificarMatricula() {
+        j_Matriculas MatriculaActual = buscarGetMatricula();
+        leer.nextLine();
+        if (MatriculaActual != null) {
+            System.out.println();
+            MatriculaActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar id_estudiante: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             MatriculaActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_estudiante: ");
+                int id_estudiante = leer.nextInt();
+                MatriculaActual.setId_estudiante(id_estudiante);
+                leer.nextLine();
+            }
+            System.out.println("Modificar id_periodo: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             MatriculaActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_periodo: ");
+                int id_periodo = leer.nextInt();
+                MatriculaActual.setId_periodo(id_periodo);
+                leer.nextLine();
+            }
+            System.out.println("Modificar id_materia: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             MatriculaActual.setPrecioCompra(precioCompra);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_materia: ");
+                int id_materia = leer.nextInt();
+                MatriculaActual.setId_materia(id_materia);;
+            }
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
-
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             MatriculaActual.setDescripcion(descripcion);
-    //         }
-
-    //         serviceMatricula.editar(MatriculaActual);
-    //     }
-    // }
+            serviceMatriculas.editar(MatriculaActual);
+        }
+    }
 
     public static void eliminarMatricula() {       
         j_Matriculas Matricula = buscarGetMatricula();

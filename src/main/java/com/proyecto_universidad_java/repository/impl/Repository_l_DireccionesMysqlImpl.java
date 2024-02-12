@@ -67,6 +67,8 @@ public class Repository_l_DireccionesMysqlImpl implements Repository_l_Direccion
         try (Connection conn = getConnection();
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, direccion.getDireccion_valor());
+            stmt.setInt(2, direccion.getId());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

@@ -69,6 +69,8 @@ public class Repository_o_PeriodoMysqlImpl implements Repository_o_Periodo {
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, periodo.getAnio());
             stmt.setString(2, periodo.getSemestre());
+            stmt.setInt(3, periodo.getId_periodo());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

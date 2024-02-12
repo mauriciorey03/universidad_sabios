@@ -71,6 +71,8 @@ public class Repository_h_SalonesMysqlImpl implements Repository_h_Salones {
             stmt.setString(1, salon.getValor_salon());
             stmt.setInt(2, salon.getCapacidad_salon());
             stmt.setInt(3, salon.getPiso_edificio());
+            stmt.setInt(4, salon.getId_salon());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

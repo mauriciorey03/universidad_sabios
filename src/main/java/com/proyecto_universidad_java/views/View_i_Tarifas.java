@@ -24,7 +24,7 @@ public class View_i_Tarifas extends View_a_MainUniversidad {
                     buscarTarifas();
                     break;
                 case 4:
-                    //modificarTarifas();
+                    modificarTarifas();
                     break;
                 case 5:
                     eliminarTarifas();
@@ -103,50 +103,47 @@ public class View_i_Tarifas extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarTarifas() {
-    //     Tarifas TarifaActual = buscarGetTarifas();
-    //     leer.nextLine();
-    //     if (TarifaActual != null) {
-    //         System.out.println();
-    //         TarifaActual.toString();
+    public static void modificarTarifas() {
+        i_Tarifas TarifaActual = buscarGetTarifas();
+        leer.nextLine();
+        if (TarifaActual != null) {
+            System.out.println();
+            TarifaActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar valor crédito: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             TarifaActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("valor crédito: ");
+                double valor_credito = leer.nextDouble();
+                TarifaActual.setValor_credito(valor_credito);
+                leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             TarifaActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            }
+            System.out.println("Modificar id_programa: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             TarifaActual.setPrecioCompra(precioCompra);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_programa: ");
+                int id_programa = leer.nextInt();
+                TarifaActual.setId_programa(id_programa);
+                leer.nextLine();
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
+            }
+            System.out.println("Modificar id_periodo: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             TarifaActual.setDescripcion(descripcion);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("id_periodo: ");
+                int precioCompra = leer.nextInt();
+                TarifaActual.setId_periodo(precioCompra);
+                leer.nextLine();
 
-    //         serviceTarifas.editar(TarifaActual);
-    //     }
-    // }
+            }
+
+            serviceTarifas.editar(TarifaActual);
+        }
+    }
 
     public static void eliminarTarifas() {       
         i_Tarifas Tarifa = buscarGetTarifas();

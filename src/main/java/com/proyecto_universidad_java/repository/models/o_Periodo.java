@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class o_Periodo {
-    private int id_edificio;
+    private int id_periodo;
     private int anio;
     private String semestre;
 

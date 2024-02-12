@@ -24,7 +24,7 @@ public class View_f_Asignaturas extends View_a_MainUniversidad {
                     buscarAsignaturas();
                     break;
                 case 4:
-                    //modificarAsignaturas();
+                    modificarAsignaturas();
                     break;
                 case 5:
                     eliminarAsignaturas();
@@ -103,58 +103,54 @@ public class View_f_Asignaturas extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarAsignaturas() {
-    //     Asignaturas AsignaturaActual = buscarGetAsignaturas();
-    //     leer.nextLine();
-    //     if (AsignaturaActual != null) {
-    //         System.out.println();
-    //         AsignaturaActual.toString();
+    public static void modificarAsignaturas() {
+        f_Asignaturas AsignaturaActual = buscarGetAsignaturas();
+        leer.nextLine();
+        if (AsignaturaActual != null) {
+            System.out.println();
+            AsignaturaActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar nombre de la materia: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             AsignaturaActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Nombre de la materia: ");
+                String nuevoNombre = leer.nextLine();
+                AsignaturaActual.setNombre_materia(nuevoNombre);
+                leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             AsignaturaActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            }
+            System.out.println("Modificar creditos: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             AsignaturaActual.setPrecioCompra(precioCompra);
-    //         }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("creditos: ");
+                int creditos = leer.nextInt();
+                AsignaturaActual.setCreditos(creditos);
+                leer.nextLine();
+            }
+            System.out.println("Modificar cantidad estudiantes: si o no? ");
+            opcion = leer.nextLine();
 
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Precio compra: ");
+                int cantidad_estudiantes = leer.nextInt();
+                AsignaturaActual.setCantidad_estudiantes(cantidad_estudiantes);
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             AsignaturaActual.setDescripcion(descripcion);
-    //         }
+            }
 
-    //         serviceAsignaturas.editar(AsignaturaActual);
-    //     }
-    // }
+
+            serviceAsignaturas.editar(AsignaturaActual);
+        }
+    }
 
     public static void eliminarAsignaturas() {       
         f_Asignaturas Asignatura = buscarGetAsignaturas();
         if (Asignatura != null) {
             serviceAsignaturas.eliminar(Asignatura.getId_materia());
-            System.out.println("El Asignaturas se elmino correctamente ");
+            System.out.println("El Asignaturas se elimino correctamente ");
         } else {
-            System.out.println("Se presento un proplema y no se puedo eliminar el Asignaturas ");
+            System.out.println("Se presento un problema y no se puedo eliminar el Asignaturas ");
         }
 
     }

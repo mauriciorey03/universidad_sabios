@@ -69,6 +69,8 @@ public class Repository_n_EdifciosMysqlImpl implements Repository_n_Edificios {
                 PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, edificio.getNombre_edificio());
             stmt.setInt(2, edificio.getPisos_edificios());
+            stmt.setInt(3, edificio.getId_edificio());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

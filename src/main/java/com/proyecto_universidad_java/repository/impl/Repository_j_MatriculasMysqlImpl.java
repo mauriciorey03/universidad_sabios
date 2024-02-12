@@ -58,6 +58,7 @@ public class Repository_j_MatriculasMysqlImpl implements Repository_j_Matriculas
             stmt.setInt(1, registro.getId_estudiante());
             stmt.setInt(2, registro.getId_periodo());
             stmt.setInt(3, registro.getId_materia());
+            
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -71,6 +72,8 @@ public class Repository_j_MatriculasMysqlImpl implements Repository_j_Matriculas
             stmt.setInt(1, registro.getId_estudiante());
             stmt.setInt(2, registro.getId_periodo());
             stmt.setInt(3, registro.getId_materia());
+            stmt.setInt(4, registro.getId_registro());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();

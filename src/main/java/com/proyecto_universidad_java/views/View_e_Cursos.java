@@ -24,7 +24,7 @@ public class View_e_Cursos extends View_a_MainUniversidad {
                     buscarCursos();
                     break;
                 case 4:
-                    //modificarCursos();
+                    modificarCursos();
                     break;
                 case 5:
                     eliminarCurso();
@@ -101,58 +101,42 @@ public class View_e_Cursos extends View_a_MainUniversidad {
     }
 
     
-    // public static void modificarCurso() {
-    //     e_Cursos CursoActual = buscarGetCurso();
-    //     leer.nextLine();
-    //     if (CursoActual != null) {
-    //         System.out.println();
-    //         CursoActual.toString();
+    public static void modificarCursos() {
+        e_Cursos CursoActual = buscarGetCurso();
+        leer.nextLine();
+        if (CursoActual != null) {
+            System.out.println();
+            CursoActual.toString();
 
-    //         System.out.println("Modificar nombre: si o no? ");
-    //         String opcion = leer.nextLine();
+            System.out.println("Modificar Nombre curso: si o no? ");
+            String opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Nombre: ");
-    //             String nuevoNombre = leer.nextLine();
-    //             CursoActual.setNombre(nuevoNombre);
-    //         }
-    //         System.out.println("Modificar precio venta: si o no? ");
-    //         opcion = leer.nextLine();
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("Nombre curso: ");
+                String nuevoNombre = leer.nextLine();
+                CursoActual.setNombre_curso(nuevoNombre);
+                leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio venta: ");
-    //             double precioVenta = leer.nextDouble();
-    //             CursoActual.setPrecioVenta(precioVenta);
-    //         }
-    //         System.out.println("Modificar precio compra: si o no? ");
-    //         opcion = leer.nextLine();
+            }
+            System.out.println("Modificar guia curso: si o no? ");
+            opcion = leer.nextLine();
 
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Precio compra: ");
-    //             double precioCompra = leer.nextDouble();
-    //             CursoActual.setPrecioCompra(precioCompra);
-    //         }
-
-    //         System.out.println("Descripción: si o no? ");
-    //         opcion = leer.nextLine();
-
-    //         if (opcion.equalsIgnoreCase("si")) {
-    //             System.out.println("Descripción: ");
-    //             String descripcion = leer.nextLine();
-    //             CursoActual.setDescripcion(descripcion);
-    //         }
-
-    //         serviceCursos.editar(CursoActual);
-    //     }
-    // }
+            if (opcion.equalsIgnoreCase("si")) {
+                System.out.println("guia curso: ");
+                String guia_curso = leer.nextLine();
+                CursoActual.setGuia_curso(guia_curso);
+            }
+            serviceCursos.editar(CursoActual);
+        }
+    }
 
     public static void eliminarCurso() {       
         e_Cursos Curso = buscarGetCurso();
         if (Curso != null) {
             serviceCursos.eliminar(Curso.getId_curso());
-            System.out.println("El Curso se elmino correctamente ");
+            System.out.println("El Curso se elimino correctamente ");
         } else {
-            System.out.println("Se presento un proplema y no se puedo eliminar el Curso ");
+            System.out.println("Se presento un problema y no se puedo eliminar el Curso ");
         }
 
     }

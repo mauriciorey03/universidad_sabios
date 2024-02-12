@@ -83,6 +83,8 @@ public class Repository_m_PersonasMysqlImpl implements Repository_m_Personas {
             stmt.setInt(7, persona.getNumero_documento());
             stmt.setInt(8, persona.getId_ciudad());
             stmt.setInt(9, persona.getId_direccion());
+            stmt.setInt(10, persona.getId_persona());
+
             stmt.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -101,7 +103,6 @@ public class Repository_m_PersonasMysqlImpl implements Repository_m_Personas {
 
     private m_Personas crearPersona(ResultSet rs) throws SQLException {
         return new m_Personas(
-                rs.getInt("id_persona"),
                 rs.getString("nombre_persona"),
                 rs.getString("apellido_persona"),
                 rs.getInt("telefono"),
